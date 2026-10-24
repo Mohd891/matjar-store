@@ -186,6 +186,159 @@ function clearCart() {
     }
 }
 
+// ===== Login / Account Functions (demo only - data is kept in the browser) =====
+
+var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Read the list of registered users (empty array if missing or corrupted)
+function getUsers() {
+    try {
+        var users = JSON.parse(localStorage.getItem("matjarUsers"));
+        if (Array.isArray(users)) {
+            return users;
+        }
+    } catch (e) {
+        // corrupted data - start fresh
+    }
+    return [];
+}
+
+// Get the logged-in user's name (or null)
+function getCurrentUser() {
+    return localStorage.getItem("matjarCurrentUser");
+}
+
+// Hash the password with SHA-256 so it is not stored as plain text
+function hashPassword(password) {
+    var data = new TextEncoder().encode(password);
+    return crypto.subtle.digest("SHA-256", data).then(function (buffer) {
+        var bytes = new Uint8Array(buffer);
+        var hex = "";
+        for (var i = 0; i < bytes.length; i++) {
+            hex += ("0" + bytes[i].toString(16)).slice(-2);
+        }
+        return hex;
+    });
+}
+
+function setError(id, message) {
+    document.getElementById(id).textContent = message;
+}
+
+// Update the navigation link and the login page depending on login state
+function updateAuthUI() {
+    var user = getCurrentUser();
+    var link = document.getElementById("auth-link");
+    if (link) {
+        link.textContent = user ? "Logout (" + user + ")" : "Login";
+        link.href = user ? "#" : "login.html";
+        link.onclick = user ? function (e) { e.preventDefault(); logout(); } : null;
+    }
+    var forms = document.getElementById("auth-forms");
+    var message = document.getElementById("logged-in-message");
+    if (forms && message) {
+        forms.style.display = user ? "none" : "block";
+        message.style.display = user ? "block" : "none";
+        document.getElementById("logged-in-name").textContent = user || "";
+    }
+}
+
+function registerUser(event) {
+    event.preventDefault();
+    var name = document.getElementById("reg-name").value.trim();
+    var email = document.getElementById("reg-email").value.trim().toLowerCase();
+    var password = document.getElementById("reg-password").value;
+    var confirmPassword = document.getElementById("reg-confirm").value;
+    var isValid = true;
+
+    setError("reg-name-error", "");
+    setError("reg-email-error", "");
+    setError("reg-password-error", "");
+    setError("reg-confirm-error", "");
+
+    if (name === "") {
+        setError("reg-name-error", "Please enter your name.");
+        isValid = false;
+    }
+    if (!EMAIL_PATTERN.test(email)) {
+        setError("reg-email-error", "Please enter a valid email address.");
+        isValid = false;
+    } else {
+        var users = getUsers();
+        for (var i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                setError("reg-email-error", "This email is already registered.");
+                isValid = false;
+            }
+        }
+    }
+    if (password.length < 6) {
+        setError("reg-password-error", "Password must be at least 6 characters.");
+        isValid = false;
+    }
+    if (confirmPassword !== password) {
+        setError("reg-confirm-error", "Passwords do not match.");
+        isValid = false;
+    }
+    if (!isValid) {
+        return false;
+    }
+
+    hashPassword(password).then(function (hash) {
+        var allUsers = getUsers();
+        allUsers.push({ name: name, email: email, password: hash });
+        localStorage.setItem("matjarUsers", JSON.stringify(allUsers));
+        localStorage.setItem("matjarCurrentUser", name);
+        alert("Account created! Welcome, " + name + ".");
+        updateAuthUI();
+    });
+    return false;
+}
+
+function loginUser(event) {
+    event.preventDefault();
+    var email = document.getElementById("login-email").value.trim().toLowerCase();
+    var password = document.getElementById("login-password").value;
+    var isValid = true;
+
+    setError("login-email-error", "");
+    setError("login-password-error", "");
+
+    if (!EMAIL_PATTERN.test(email)) {
+        setError("login-email-error", "Please enter a valid email address.");
+        isValid = false;
+    }
+    if (password === "") {
+        setError("login-password-error", "Please enter your password.");
+        isValid = false;
+    }
+    if (!isValid) {
+        return false;
+    }
+
+    hashPassword(password).then(function (hash) {
+        var users = getUsers();
+        for (var i = 0; i < users.length; i++) {
+            if (users[i].email === email && users[i].password === hash) {
+                localStorage.setItem("matjarCurrentUser", users[i].name);
+                alert("Welcome back, " + users[i].name + "!");
+                updateAuthUI();
+                return;
+            }
+        }
+        setError("login-password-error", "Incorrect email or password.");
+    });
+    return false;
+}
+
+function logout() {
+    localStorage.removeItem("matjarCurrentUser");
+    updateAuthUI();
+}
+
+// Run on every page once the DOM is ready
+document.addEventListener("DOMContentLoaded", updateAuthUI);
+
 // ===== Form Validation Function =====
 
 function validateForm() {

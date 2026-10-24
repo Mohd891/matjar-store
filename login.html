@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matjar - Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Matjar</h1>
+        <p>Online Shopping in Saudi Arabia</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html">Shopping Cart</a>
+        <a href="login.html" id="auth-link">Login</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2>Login or Create an Account</h2>
+        <p class="auth-note">Demo only: accounts are stored in your browser (no server), so do not use a real password.</p>
+
+        <p id="logged-in-message" style="display: none; text-align: center; font-size: 18px;">
+            You are logged in as <strong id="logged-in-name"></strong>.
+            <button class="btn btn-red" onclick="logout()">Logout</button>
+        </p>
+
+        <div id="auth-forms">
+
+            <!-- Login Form -->
+            <div class="auth-box">
+                <h3>Login</h3>
+                <form onsubmit="return loginUser(event)">
+                    <div class="form-group">
+                        <label for="login-email">Email Address:</label>
+                        <input type="email" id="login-email" placeholder="Enter your email">
+                        <p class="error-message" id="login-email-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                        <p class="error-message" id="login-password-error"></p>
+                    </div>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="auth-box">
+                <h3>Create Account</h3>
+                <form onsubmit="return registerUser(event)">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name:</label>
+                        <input type="text" id="reg-name" placeholder="Enter your full name">
+                        <p class="error-message" id="reg-name-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email Address:</label>
+                        <input type="email" id="reg-email" placeholder="Enter your email">
+                        <p class="error-message" id="reg-email-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password:</label>
+                        <input type="password" id="reg-password" placeholder="At least 6 characters">
+                        <p class="error-message" id="reg-password-error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm">Confirm Password:</label>
+                        <input type="password" id="reg-confirm" placeholder="Repeat your password">
+                        <p class="error-message" id="reg-confirm-error"></p>
+                    </div>
+                    <input type="submit" value="Create Account">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Matjar - Online Shopping in Saudi Arabia. All rights reserved.</p>
+        <p>Contact us: info@matjar.com | Phone: +966 50 123 4567</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

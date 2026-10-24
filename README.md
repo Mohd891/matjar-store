@@ -8,6 +8,7 @@ Originally a team project for the *Web Systems Development* course; improved and
 - Shopping cart stored in `localStorage` (add, remove, clear, quantity merge)
 - Automatic 15% VAT and grand total calculation
 - Contact form with JavaScript validation (name, email format, numeric phone, message)
+- Demo login / create-account page (browser-only, passwords hashed with SHA-256; no real backend)
 - Responsive layout (`@media` query) and a single shared stylesheet
 
 ## Run locally
@@ -15,7 +16,7 @@ Open `index.html` in a browser – no build step needed.
 
 ## Project structure
 ```
-index.html  products.html  product1-4.html  about.html  contact.html  cart.html
+index.html  products.html  product1-4.html  about.html  contact.html  cart.html  login.html
 style.css   main.js        images/
 ```
 
