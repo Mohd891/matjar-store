@@ -33,6 +33,9 @@ index.html  products.html  product1-4.html  about.html  contact.html  cart.html 
 style.css   main.js        images/
 ```
 
+## PHP + MySQL version
+A database-backed version (accounts, reviews, orders) is in [`php-version/`](php-version/). It needs a PHP server and is not part of the GitHub Pages demo.
+
 ## Image credits
 Product photos are from [Unsplash](https://unsplash.com) (free to use under the Unsplash License):
 smartphone photo by Andrey Matveev, T-shirt photo by Avtar Singh, laptop and blender photos from Unsplash contributors.
