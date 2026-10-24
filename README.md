@@ -11,6 +11,19 @@ Originally a team project for the *Web Systems Development* course; improved and
 - Demo login / create-account page (browser-only, passwords hashed with SHA-256; no real backend)
 - Responsive layout (`@media` query) and a single shared stylesheet
 
+## Screenshots
+| Home | Products |
+|---|---|
+| ![Home](screenshots/home.png) | ![Products](screenshots/products.png) |
+
+| Product details | Shopping cart |
+|---|---|
+| ![Product details](screenshots/product-detail.png) | ![Cart](screenshots/cart.png) |
+
+| Login / Create account | Contact form validation |
+|---|---|
+| ![Login](screenshots/login.png) | ![Contact validation](screenshots/contact-validation.png) |
+
 ## Run locally
 Open `index.html` in a browser – no build step needed.
 
