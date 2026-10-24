@@ -33,6 +33,10 @@ index.html  products.html  product1-4.html  about.html  contact.html  cart.html 
 style.css   main.js        images/
 ```
 
+## Image credits
+Product photos are from [Unsplash](https://unsplash.com) (free to use under the Unsplash License):
+smartphone photo by Andrey Matveev, T-shirt photo by Avtar Singh, laptop and blender photos from Unsplash contributors.
+
 ## Team
 Ali Yousef Alalawi, Mohammed Abdullah Alramadhan, Ahmed Hussain Alsaeed,
 Hassan Abdullah Alsuhayyih, Mohammed Waled, Youssef Alattiyah
