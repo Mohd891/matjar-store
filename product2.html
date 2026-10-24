@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matjar - HP Pavilion Laptop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Matjar</h1>
+        <p>Online Shopping in Saudi Arabia</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html">Shopping Cart</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2>HP Pavilion Laptop</h2>
+
+        <!-- Product Detail Section -->
+        <div class="product-detail">
+
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="images/laptop.svg" alt="HP Pavilion Laptop" width="300" height="300">
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+                <p class="price" style="font-size: 24px;">3,499 SAR</p>
+
+                <p>The HP Pavilion Laptop is perfect for students and professionals. 
+                It comes with a fast processor, enough storage, and a comfortable keyboard for daily use.</p>
+
+                <!-- Product Specifications Table -->
+                <h3>Specifications</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Display</td>
+                            <td>15.6 inch Full HD</td>
+                        </tr>
+                        <tr>
+                            <td>Processor</td>
+                            <td>Intel Core i5-1335U</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>16 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>512 GB SSD</td>
+                        </tr>
+                        <tr>
+                            <td>Graphics</td>
+                            <td>Intel Iris Xe</td>
+                        </tr>
+                        <tr>
+                            <td>Battery Life</td>
+                            <td>Up to 8 hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Quantity and Add to Cart -->
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                </div>
+
+                <button class="btn" onclick="addToCart('HP Pavilion Laptop', 3499)">Add to Cart</button>
+                <a href="products.html" class="btn" style="background-color: #7f8c8d;">Back to Products</a>
+            </div>
+
+        </div>
+
+        <!-- Clear float -->
+        <div class="clearfix"></div>
+
+        <!-- Customer Reviews -->
+        <h3>Customer Reviews</h3>
+        <ul>
+            <li><strong>Khalid:</strong> Great laptop for university work and studying.</li>
+            <li><strong>Fatima:</strong> Fast and reliable. I use it every day.</li>
+            <li><strong>Omar:</strong> Good value for the price. Recommended!</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Matjar - Online Shopping in Saudi Arabia. All rights reserved.</p>
+        <p>Contact us: info@matjar.com | Phone: +966 50 123 4567</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

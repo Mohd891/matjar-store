@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matjar - Samsung Galaxy S24</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Matjar</h1>
+        <p>Online Shopping in Saudi Arabia</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="cart.html">Shopping Cart</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2>Samsung Galaxy S24</h2>
+
+        <!-- Product Detail Section -->
+        <div class="product-detail">
+
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="images/smartphone.svg" alt="Samsung Galaxy S24" width="300" height="300">
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+                <p class="price" style="font-size: 24px;">2,999 SAR</p>
+
+                <p>The Samsung Galaxy S24 is the latest flagship smartphone from Samsung. 
+                It features a stunning display, powerful processor, and an amazing camera system.</p>
+
+                <!-- Product Specifications Table -->
+                <h3>Specifications</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Display</td>
+                            <td>6.2 inch AMOLED</td>
+                        </tr>
+                        <tr>
+                            <td>Processor</td>
+                            <td>Snapdragon 8 Gen 3</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>8 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>256 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Camera</td>
+                            <td>50 MP Main Camera</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>4000 mAh</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Quantity and Add to Cart -->
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+                </div>
+
+                <button class="btn" onclick="addToCart('Samsung Galaxy S24', 2999)">Add to Cart</button>
+                <a href="products.html" class="btn" style="background-color: #7f8c8d;">Back to Products</a>
+            </div>
+
+        </div>
+
+        <!-- Clear float -->
+        <div class="clearfix"></div>
+
+        <!-- Customer Reviews -->
+        <h3>Customer Reviews</h3>
+        <ul>
+            <li><strong>Ahmed:</strong> Great phone with amazing camera quality!</li>
+            <li><strong>Sara:</strong> Fast delivery and the phone works perfectly.</li>
+            <li><strong>Mohammed:</strong> Best Samsung phone I have ever used.</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Matjar - Online Shopping in Saudi Arabia. All rights reserved.</p>
+        <p>Contact us: info@matjar.com | Phone: +966 50 123 4567</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

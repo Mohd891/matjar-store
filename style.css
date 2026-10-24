@@ -1,0 +1,378 @@
+/* style.css - External Style Sheet for Matjar Website */
+/* This file controls the styling for all pages */
+
+/* ===== Default Font and Size ===== */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+/* ===== Header Section ===== */
+header {
+    background-color: #1a5276;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+/* ===== Navigation Menu ===== */
+nav {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background-color: #1a5276;
+    border-radius: 4px;
+}
+
+/* ===== Main Content Section ===== */
+.main-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+/* ===== Footer Section ===== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: #1a5276;
+    font-size: 24px;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+/* ===== Links ===== */
+a {
+    color: #1a5276;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+/* ===== Hero Section on Homepage ===== */
+.hero {
+    background-color: #1a5276;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+/* ===== Product Cards ===== */
+.product-card {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 200px;
+    float: left;
+}
+
+.product-card:hover {
+    border-color: #1a5276;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #eeeeee;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+
+.product-card .price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ===== Clear Float ===== */
+.clearfix {
+    clear: both;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #219150;
+    color: white;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+}
+
+.btn-red:hover {
+    background-color: #c0392b;
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1a5276;
+    color: white;
+}
+
+/* ===== Forms ===== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 25px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #219150;
+}
+
+input[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* ===== Product Detail Page ===== */
+.product-detail {
+    overflow: hidden;
+}
+
+.product-image {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+.product-image img {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.product-info {
+    float: left;
+    width: 600px;
+}
+
+/* ===== About Page ===== */
+.about-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #1a5276;
+    background-color: #f5f5f5;
+}
+
+/* ===== Categories Section ===== */
+.category-box {
+    float: left;
+    width: 220px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #eaf2f8;
+    border: 1px solid #aed6f1;
+    border-radius: 5px;
+}
+
+.category-box:hover {
+    background-color: #d4e6f1;
+}
+
+/* ===== Deal Banner ===== */
+.deal-banner {
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===== Cart Page ===== */
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    padding: 10px;
+    border-top: 2px solid #1a5276;
+    margin-top: 10px;
+}
+
+.cart-total strong {
+    color: #e74c3c;
+}
+
+/* ===== Trust Badges ===== */
+.trust-badges {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 15px;
+    border-top: 1px solid #dddddd;
+}
+
+.badge {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #1a5276;
+    font-weight: bold;
+}
+
+/* ===== Error Message for Form ===== */
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ===== Quantity Input ===== */
+.quantity-input {
+    width: 60px !important;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+    .product-card {
+        float: none;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .category-box {
+        float: none;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .product-image {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .product-info {
+        float: none;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px;
+    }
+}
