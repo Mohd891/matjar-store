@@ -156,6 +156,16 @@ function displayCart() {
     if (cartGrand) {
         cartGrand.textContent = grandTotal.toFixed(2) + " SAR";
     }
+
+    // Free delivery message (orders over 200 SAR)
+    var cartDelivery = document.getElementById("cart-delivery");
+    if (cartDelivery) {
+        if (grandTotal > 200) {
+            cartDelivery.textContent = "You qualify for free delivery!";
+        } else {
+            cartDelivery.textContent = "Add " + (200 - grandTotal).toFixed(2) + " SAR more to get free delivery.";
+        }
+    }
 }
 
 // Function to remove a product from the cart
